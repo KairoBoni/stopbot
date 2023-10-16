@@ -1,4 +1,4 @@
-package com.kairoboni.stopbot.app.http.controllers.SearchContoller;
+package com.kairoboni.stopbot.app.http.controllers.search;
 
 
 import com.kairoboni.stopbot.core.packages.search.themes.responses.Response;

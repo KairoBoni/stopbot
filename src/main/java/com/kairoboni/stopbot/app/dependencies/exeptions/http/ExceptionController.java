@@ -16,7 +16,7 @@ import java.util.Date;
 @RestController
 public class ExceptionController extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(InternalServerErrorException.class)
     public final ResponseEntity<BaseException> handleInternalServerError(WebRequest request) {
         BaseException baseException = new BaseException(
                 new Date(),

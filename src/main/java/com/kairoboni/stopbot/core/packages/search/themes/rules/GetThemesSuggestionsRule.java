@@ -1,6 +1,7 @@
 package com.kairoboni.stopbot.core.packages.search.themes.rules;
 
 import com.kairoboni.stopbot.core.packages.search.themes.entities.ThemeSuggestion;
+import com.kairoboni.stopbot.core.packages.search.themes.exceptions.GetThemesSuggestionsException;
 import com.kairoboni.stopbot.core.packages.search.themes.gateways.ThemeSuggestionGateway;
 
 import java.util.List;
@@ -13,6 +14,10 @@ public class GetThemesSuggestionsRule {
     }
 
     public List<ThemeSuggestion> apply(List<String> themes) {
-        return this.themeSuggestionGateway.get(themes);
+        try{
+            return this.themeSuggestionGateway.get(themes);
+        } catch (Throwable th) {
+            throw new GetThemesSuggestionsException(th);
+        }
     }
 }

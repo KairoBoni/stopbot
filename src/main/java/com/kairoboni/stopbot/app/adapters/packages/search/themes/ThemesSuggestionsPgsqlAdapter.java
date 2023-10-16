@@ -8,10 +8,11 @@ import java.util.List;
 
 public class ThemesSuggestionsPgsqlAdapter implements ThemeSuggestionGateway {
     @Override
-    public List<ThemeSuggestion> get(List<String> themes) {
-        List<ThemeSuggestion> themesSuggestions = new ArrayList<>();
-        themesSuggestions.add(new ThemeSuggestion("Carro", "Voyage"));
-
-        return themesSuggestions;
+    public List<ThemeSuggestion> get(List<String> themes) throws Exception {
+        throw new Exception();
+//        List<ThemeSuggestion> themesSuggestions = new ArrayList<>();
+//        themesSuggestions.add(new ThemeSuggestion("Carro", "Voyage"));
+//
+//        return themesSuggestions;
     }
 }
