@@ -13,7 +13,7 @@ public final class Controller {
     @Autowired
     private Service service;
     @GetMapping
-    public Response themes() {
+    public Response themes() throws Exception {
         return service.themes();
     }
 }
