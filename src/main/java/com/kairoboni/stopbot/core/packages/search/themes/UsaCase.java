@@ -21,7 +21,10 @@ public class UsaCase {
     public Response execute(Request request) {
         try {
             this.logger.info("[themes::UseCase] Init UseCase: \n{\nthemes: %s,\n}\n", request.getThemes());
-            return new Response(this.getThemesSuggestionsRule.apply(request.getThemes()));
+            return new Response(this.getThemesSuggestionsRule.apply(
+                    request.getFirstLetter(),
+                    request.getThemes()
+            ));
         } catch (Throwable th) {
             this.logger.error("[themes::UseCase] Error on execute UseCase: \n{\nthemes: %s,\n}\n", th, request.getThemes());
             throw th;

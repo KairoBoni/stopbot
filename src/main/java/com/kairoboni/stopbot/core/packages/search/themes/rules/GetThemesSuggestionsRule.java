@@ -13,9 +13,9 @@ public class GetThemesSuggestionsRule {
         this.themeSuggestionGateway = themeSuggestionGateway;
     }
 
-    public List<ThemeSuggestion> apply(List<String> themes) {
+    public List<ThemeSuggestion> apply(char firstLetter, List<String> themes) {
         try{
-            return this.themeSuggestionGateway.get(themes);
+            return this.themeSuggestionGateway.get(firstLetter, themes);
         } catch (Throwable th) {
             throw new GetThemesSuggestionsException(th);
         }
