@@ -1,9 +1,9 @@
-package com.kairoboni.stopbot.app.adapters.packages.search.themes;
+package com.kairoboni.stopbot.app.adapters.packages.search.suggestions;
 
 import com.kairoboni.stopbot.app.models.ThemesSuggestionsModel;
 import com.kairoboni.stopbot.app.models.ThemesSuggestionsRepository;
-import com.kairoboni.stopbot.core.packages.search.themes.entities.ThemeSuggestion;
-import com.kairoboni.stopbot.core.packages.search.themes.gateways.ThemeSuggestionGateway;
+import com.kairoboni.stopbot.core.packages.search.suggestions.entities.ThemeSuggestion;
+import com.kairoboni.stopbot.core.packages.search.suggestions.gateways.ThemeSuggestionGateway;
 
 import java.util.*;
 

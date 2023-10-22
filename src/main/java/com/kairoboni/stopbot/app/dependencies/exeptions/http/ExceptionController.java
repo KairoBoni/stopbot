@@ -26,4 +26,26 @@ public class ExceptionController extends ResponseEntityExceptionHandler {
 
         return new ResponseEntity<>(baseException, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ExceptionHandler(UnprocessableEntityException.class)
+    public final ResponseEntity<BaseException> handleUnprocessableEntity(WebRequest request) {
+        BaseException baseException = new BaseException(
+                new Date(),
+                "Unprocessable Entity",
+                request.getDescription(false)
+        );
+
+        return new ResponseEntity<>(baseException, HttpStatus.UNPROCESSABLE_ENTITY);
+    }
+
+    @ExceptionHandler(BadRequestException.class)
+    public final ResponseEntity<BaseException> handleBadRequest(WebRequest request) {
+        BaseException baseException = new BaseException(
+                new Date(),
+                "Bad Request",
+                request.getDescription(false)
+        );
+
+        return new ResponseEntity<>(baseException, HttpStatus.BAD_REQUEST);
+    }
 }

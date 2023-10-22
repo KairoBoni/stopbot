@@ -1,4 +1,4 @@
-package com.kairoboni.stopbot.core.packages.search.themes.entities;
+package com.kairoboni.stopbot.core.packages.search.suggestions.entities;
 
 public class ThemeSuggestion {
     private final String theme;

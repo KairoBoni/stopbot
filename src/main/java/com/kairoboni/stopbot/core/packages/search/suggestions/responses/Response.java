@@ -1,6 +1,6 @@
-package com.kairoboni.stopbot.core.packages.search.themes.responses;
+package com.kairoboni.stopbot.core.packages.search.suggestions.responses;
 
-import com.kairoboni.stopbot.core.packages.search.themes.entities.ThemeSuggestion;
+import com.kairoboni.stopbot.core.packages.search.suggestions.entities.ThemeSuggestion;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.kairoboni.stopbot.core.packages.search.themes.requests;
+package com.kairoboni.stopbot.core.packages.search.suggestions.requests;
 
 import java.util.List;
 

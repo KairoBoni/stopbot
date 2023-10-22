@@ -1,10 +1,10 @@
-package com.kairoboni.stopbot.core.packages.search.themes;
+package com.kairoboni.stopbot.core.packages.search.suggestions;
 
 import com.kairoboni.stopbot.core.dependencies.LoggerInterface;
-import com.kairoboni.stopbot.core.packages.search.themes.gateways.ThemeSuggestionGateway;
-import com.kairoboni.stopbot.core.packages.search.themes.requests.Request;
-import com.kairoboni.stopbot.core.packages.search.themes.responses.Response;
-import com.kairoboni.stopbot.core.packages.search.themes.rules.GetThemesSuggestionsRule;
+import com.kairoboni.stopbot.core.packages.search.suggestions.gateways.ThemeSuggestionGateway;
+import com.kairoboni.stopbot.core.packages.search.suggestions.requests.Request;
+import com.kairoboni.stopbot.core.packages.search.suggestions.responses.Response;
+import com.kairoboni.stopbot.core.packages.search.suggestions.rules.GetThemesSuggestionsRule;
 
 public class UsaCase {
     private final GetThemesSuggestionsRule getThemesSuggestionsRule;
@@ -20,13 +20,13 @@ public class UsaCase {
 
     public Response execute(Request request) {
         try {
-            this.logger.info("[themes::UseCase] Init UseCase: \n{\nthemes: %s,\n}\n", request.getThemes());
+            this.logger.info("[search:suggestions::UseCase] Init UseCase: \n{\nthemes: %s,\n}\n", request.getThemes());
             return new Response(this.getThemesSuggestionsRule.apply(
                     request.getFirstLetter(),
                     request.getThemes()
             ));
         } catch (Throwable th) {
-            this.logger.error("[themes::UseCase] Error on execute UseCase: \n{\nthemes: %s,\n}\n", th, request.getThemes());
+            this.logger.error("[search:suggestions::UseCase] Error on execute UseCase: \n{\nthemes: %s,\n}\n", th, request.getThemes());
             throw th;
         }
     }

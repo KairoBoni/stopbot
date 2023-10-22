@@ -10,4 +10,7 @@ import java.util.List;
 @Repository
 public interface ThemesSuggestionsRepository extends JpaRepository<ThemesSuggestionsModel, Long> {
     List<ThemesSuggestionsModel> findByThemeInAndFirstLetter(List<String> theme, char firstLetter);
+
+    @Query("SELECT theme FROM ThemesSuggestionsModel GROUP BY theme")
+    List<String> findAllThemes();
 }

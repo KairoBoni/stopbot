@@ -1,8 +1,8 @@
-package com.kairoboni.stopbot.core.packages.search.themes.rules;
+package com.kairoboni.stopbot.core.packages.search.suggestions.rules;
 
-import com.kairoboni.stopbot.core.packages.search.themes.entities.ThemeSuggestion;
-import com.kairoboni.stopbot.core.packages.search.themes.exceptions.GetThemesSuggestionsException;
-import com.kairoboni.stopbot.core.packages.search.themes.gateways.ThemeSuggestionGateway;
+import com.kairoboni.stopbot.core.packages.search.suggestions.entities.ThemeSuggestion;
+import com.kairoboni.stopbot.core.packages.search.suggestions.exceptions.GetThemesSuggestionsException;
+import com.kairoboni.stopbot.core.packages.search.suggestions.gateways.ThemeSuggestionGateway;
 
 import java.util.List;
 
