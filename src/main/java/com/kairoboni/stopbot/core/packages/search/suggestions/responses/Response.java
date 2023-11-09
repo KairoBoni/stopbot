@@ -5,13 +5,13 @@ import com.kairoboni.stopbot.core.packages.search.suggestions.entities.ThemeSugg
 import java.util.List;
 
 public class Response {
-    private final List<ThemeSuggestion> $themesSuggestions;
+    private final List<ThemeSuggestion> themesSuggestions;
 
-    public Response(List<ThemeSuggestion> $themesSuggestions) {
-        this.$themesSuggestions = $themesSuggestions;
+    public Response(List<ThemeSuggestion> themesSuggestions) {
+        this.themesSuggestions = themesSuggestions;
     }
 
-    public List<ThemeSuggestion> get$themesSuggestions() {
-        return $themesSuggestions;
+    public List<ThemeSuggestion> getThemesSuggestions() {
+        return themesSuggestions;
     }
 }

@@ -6,11 +6,11 @@ import com.kairoboni.stopbot.core.packages.search.suggestions.requests.Request;
 import com.kairoboni.stopbot.core.packages.search.suggestions.responses.Response;
 import com.kairoboni.stopbot.core.packages.search.suggestions.rules.GetThemesSuggestionsRule;
 
-public class UsaCase {
+public class UseCase {
     private final GetThemesSuggestionsRule getThemesSuggestionsRule;
     private final LoggerInterface logger;
 
-    public UsaCase(
+    public UseCase(
             LoggerInterface logger,
             ThemeSuggestionGateway themeSuggestionGateway
     ) {

@@ -14,7 +14,7 @@ public class ThemesSuggestionsPgsqlAdapter implements ThemeSuggestionGateway {
         this.themesSuggestionsRepository = themesSuggestionsRepository;
     }
 
-    public List<ThemeSuggestion> get(char firstLetter, List<String> themes) throws Exception {
+    public List<ThemeSuggestion> get(char firstLetter, List<String> themes) {
         List<ThemesSuggestionsModel> themesSuggestionModel = themesSuggestionsRepository.findByThemeInAndFirstLetter(themes, firstLetter);
         Collections.shuffle(themesSuggestionModel);
 

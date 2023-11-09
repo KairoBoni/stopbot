@@ -7,7 +7,7 @@ import com.kairoboni.stopbot.app.dependencies.exeptions.http.UnprocessableEntity
 import com.kairoboni.stopbot.app.dependencies.logger.BaseLogger;
 import com.kairoboni.stopbot.app.factory.search.suggestions.CreateRequest;
 import com.kairoboni.stopbot.app.models.ThemesSuggestionsRepository;
-import com.kairoboni.stopbot.core.packages.search.suggestions.UsaCase;
+import com.kairoboni.stopbot.core.packages.search.suggestions.UseCase;
 import com.kairoboni.stopbot.core.packages.search.suggestions.requests.Request;
 import com.kairoboni.stopbot.core.packages.search.suggestions.responses.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class SearchService {
     public Response suggestions(char startLetter, String themes) {
         try {
             this.logger.info("[suggestions] Init service");
-            UsaCase useCase = new UsaCase(
+            UseCase useCase = new UseCase(
                     this.logger,
                     new ThemesSuggestionsPgsqlAdapter(themesSuggestionsRepository)
             );

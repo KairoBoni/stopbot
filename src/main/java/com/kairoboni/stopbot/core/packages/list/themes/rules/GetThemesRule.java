@@ -2,7 +2,7 @@ package com.kairoboni.stopbot.core.packages.list.themes.rules;
 
 
 
-import com.kairoboni.stopbot.core.packages.list.themes.exceptions.GetThemesSuggestionsException;
+import com.kairoboni.stopbot.core.packages.list.themes.exceptions.GetThemesException;
 import com.kairoboni.stopbot.core.packages.list.themes.gateways.ThemeSuggestionGateway;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class GetThemesRule {
         try{
             return this.themeSuggestionGateway.getAllThemes();
         } catch (Throwable th) {
-            throw new GetThemesSuggestionsException(th);
+            throw new GetThemesException(th);
         }
     }
 }
